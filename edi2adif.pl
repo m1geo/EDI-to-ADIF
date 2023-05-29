@@ -31,10 +31,10 @@ my $ContestBand = "0cm";
 my $ContestMode = "SSB";
 
 # Stats
-my $QSOsRead = 1;
-my $LinesRead= 1;
-my $QSOsWrote= 1;
-my $LinesWrote= 1;
+my $QSOsRead = 0;
+my $LinesRead= 0;
+my $QSOsWrote= 0;
+my $LinesWrote= 0;
 my $QSOError=0;
 
 # Main data
