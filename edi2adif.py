@@ -6,7 +6,7 @@
 # 21 May 2012 - Free software under GNU GPL.
 # Modified for generic EDI to ADIF conversion by Mario Roessler, DH5YM
 # 11 Dec 2022 - Free software under GNU GPL.
-# Fixed bug where no QSLs could be found, by Oliver Burns
+# Fixed bug where no QSOs could be found, by Oliver Burns
 # 04 Jan 2025 - Free software under GNU GPL.
 
 import sys
@@ -223,5 +223,6 @@ if QSOsWrote == QSOsRead:
 else:
     print(f"\n* Some records were not converted correctly. Check \"{OUTFILE}\"!")
     sys.exit(1)
+
 
 
