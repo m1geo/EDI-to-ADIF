@@ -6,6 +6,8 @@
 # 21 May 2012 - Free software under GNU GPL.
 # Modified for generic EDI to ADIF conversion by Mario Roessler, DH5YM
 # 11 Dec 2022 - Free software under GNU GPL.
+# Fixed bug where no QSLs could be found, by Oliver Burns
+# 04 Jan 2025 - Free software under GNU GPL.
 
 import sys
 
@@ -150,7 +152,7 @@ with open(INFILE, "r") as infile, open(OUTFILE, "w") as outfile:
             else:
                 print("\nNo Remarks in Remark section.")
                 line = nextline
-        elif line.startswith("[QSORecords"):
+        if line.startswith("[QSORecords"):
             print("processing log...")
             for QSOline in infile:
                 LinesRead += 1
@@ -221,4 +223,5 @@ if QSOsWrote == QSOsRead:
 else:
     print(f"\n* Some records were not converted correctly. Check \"{OUTFILE}\"!")
     sys.exit(1)
+
 
